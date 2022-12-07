@@ -1,0 +1,9 @@
+﻿#pragma once
+#include <iostream>
+#include <cstdlib>          
+#include "wektor.h"       
+#include <ctime>     
+#include <iomanip>
+#include <fstream>   
+#include "wektor.h"
+#include "matrix.h"
