@@ -1,0 +1,5 @@
+Wartosci macierzy:
+                     Kolumna 1           Kolumna 2
+
+Wiersz 1                     1                   2
+Wiersz 2                     3                   4

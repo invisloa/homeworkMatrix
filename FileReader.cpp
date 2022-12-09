@@ -14,7 +14,7 @@ VECTOR::Matrix FileReader::readMatrixFromFile()
 	}
 	int count = 0;          // liczba elementów do odczytu
 
-	for (int i = 0; i < 5; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		++count;
 		inFile >> valuesArray[i];

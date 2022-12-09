@@ -28,5 +28,6 @@ void FileWriter::WriteToFile(double r1c1, double r1c2, double r2c1, double r2c2)
 		outFileAll << right << setw(20) << matrixToWrite.row2Vect.yval() << endl;
 		outFileValuesOnly << matrixToWrite.row2Vect.xval() << " ";
 		outFileValuesOnly << matrixToWrite.row2Vect.yval();
+		outFileValuesOnly.close();
 		outFileAll.close();
 }

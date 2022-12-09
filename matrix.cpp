@@ -1,6 +1,4 @@
 ﻿#include "pch.h"
-
-// vect.cpp -- implementacje metod klasy Vector
 #include <cmath>
 #include "wektor.h"        // włącza plik nagłówkowy <iostream>
 #include <iomanip>
@@ -11,7 +9,6 @@ using std::cout;
 const int maxStrLength = 60;
 namespace VECTOR
 {
-
 	// metody publiczne
 	Matrix::Matrix()          // konstruktor domyślny
 	{
@@ -31,8 +28,6 @@ namespace VECTOR
 	Matrix::~Matrix()   // destruktor
 	{
 	}
-
-
 	Matrix Matrix::operator+(const Matrix& b) const
 	{
 		return Matrix(row1Vect + b.row1Vect, row2Vect + b.row2Vect);
@@ -63,16 +58,15 @@ namespace VECTOR
 
 		return Matrix(r1c1, r1c2, r2c1, r2c2);
 	}
-	// zmienia znak wektora
+	// zmienia znak matrix
 	Matrix Matrix::operator-() const
 	{
 		//Matrix x;
 		//x.row1Vect = -this->row1Vect;
 		//x.row2Vect = -this->row2Vect;
-
 		return Matrix(-row1Vect, -row2Vect);
 	}
-	// mnoży wektor wywołujący przez n
+	// mnoży matrix wywołujący przez n
 	Matrix Matrix::operator*(double n) const
 	{
 		return Matrix(row1Vect * n, row2Vect * n);
@@ -83,7 +77,6 @@ namespace VECTOR
 		this->row2Vect = (this->row2Vect * n);
 		return *this;
 	}
-
 
 	VECTOR::Matrix Matrix::getMatrixValues()
 	{
@@ -103,19 +96,15 @@ namespace VECTOR
 		return VECTOR::Matrix(w1c1, w1c2, w2c1, w2c2);
 	}
 
-
-
 	std::ostream& operator<<(std::ostream& os, const Matrix& matrix)
 	{
 		os << "Wartosci macierzy:" << endl;;
-
 		os << right << setw(30) << "Kolumna 1";
 		os << right << setw(20) << "Kolumna 2" << endl;
 		os << endl;
 		os << "Wiersz 1";
 		os << right << setw(22) << matrix.row1Vect.xval();
 		os << right << setw(20) << matrix.row1Vect.yval() << endl;
-
 		os << "Wiersz 2";
 		os << right << setw(22) << matrix.row2Vect.xval();
 		os << right << setw(20) << matrix.row2Vect.yval() << endl;
@@ -124,8 +113,5 @@ namespace VECTOR
 		//	<< "\twiersz 2 kolumna 1: = " << m.r2c1 << ", kolumna 2: " << m.r2c2 << "\n";
 		return os;
 	}
-
-	// wyświetla współrzędne wektora (prostokątne w trybie 'r',
-	// biegunowe w trybie 'p'
-} // koniec przestrzeni nazw VECTOR
+}
 

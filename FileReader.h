@@ -17,7 +17,7 @@ class FileReader
 {
 public:
 	string filename;
-	ifstream inFile;        // obiekt obsługujący odczyt z pliku
+	ifstream inFile;
 	double valuesArray[4];
 
 	VECTOR::Matrix readMatrixFromFile();
