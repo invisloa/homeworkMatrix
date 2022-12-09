@@ -14,7 +14,6 @@
 
 int main()
 {
-
 	FileReader _fileReader;
 	VECTOR::Matrix Matrix1 = _fileReader.readMatrixFromFile();
 	VECTOR::Matrix Matrix3;
@@ -70,7 +69,6 @@ int main()
 		cin >> saveFilePath;
 		FileWriter::filePath = saveFilePath;
 	}
-
 	FileWriter::WriteToFile(Matrix3.row1Vect.xval(), Matrix3.row1Vect.yval(), Matrix3.row2Vect.xval(), Matrix3.row2Vect.yval());
 	return 0;
 }
